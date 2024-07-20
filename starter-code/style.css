@@ -1,6 +1,38 @@
+@font-face {
+  font-family: 'Space Grotesk Bold';
+  src: url(/assets/fonts/static/SpaceGrotesk-Bold.ttf);
+}
 
+@font-face {
+  font-family: 'Space Grotesk Medium';
+  src: url(/assets/fonts/static/SpaceGrotesk-Medium.ttf);
+}
 
+@font-face {
+  font-family: 'Space Grotesk Variable';
+  src: url(/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
 
+:root {
+  --clr-neutral-200: #151515;
+  --clr-neutral-300: #242424;
+  --clr-neutral-800: #d9d9d9;
+  --clr-neutral-900: #ffffff;
+
+  --clr-accent-600: #4ee1a0;
+
+  --ff-heading: 'Space Grotesk Bold', sans-serif;
+  --ff-body: 'Space Grotesk Medium', sans-serif;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --fs-400: 1.125rem;
+  --fs-300: 1.5rem;
+  --fs-200: 3rem;
+  --fs-100: 5.5rem;
+}
 
 /* Box sizing rules */
 *,
@@ -77,3 +109,78 @@ textarea:not([rows]) {
 }
 
 /* Styling */
+
+html {
+  background-color: var(--clr-neutral-200);
+  overflow-x: hidden;
+}
+
+body {
+font-family: var(--ff-body);
+font-size: var(--fs-400);
+font-weight: var(--fw-400);
+color: var(--clr-neutral-900);
+padding: 1rem;
+position: relative;
+}
+
+.hero {
+  display: grid;
+  justify-items: center;
+  gap: 1.25rem;
+  width: fit-content;
+  margin-inline: auto;
+  position: relative;
+}
+
+.navigation {
+  display: grid;
+  justify-content: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.navigation .logo {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-300);
+}
+
+.navigation .logo a {
+  text-decoration: none;
+}
+
+.profile-pic {
+  width: 174px;
+  position: relative;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.hero .background-element {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(var(--clr-neutral-200), var(--clr-neutral-300));
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.hero-images .rings {
+  height: 129px;
+  width: 530px;
+  position: absolute;
+  top: 8rem;
+  right: 50%;
+  z-index: -1;
+}
+
+.hero-images .circle {
+  position: absolute;
+  top: 16.5rem;
+  right: -5rem;
+}
