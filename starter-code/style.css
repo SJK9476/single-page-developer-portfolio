@@ -150,9 +150,18 @@ position: relative;
   text-decoration: none;
 }
 
+.logo:hover {
+  color: var(--clr-accent-600);
+  transition: 0.3s linear all;
+}
+
 .profile-pic {
   width: 174px;
   position: relative;
+}
+
+.profile-pic img {
+  object-fit: cover;
 }
 
 .social-links {
@@ -170,13 +179,16 @@ position: relative;
   z-index: -2;
 }
 
-.hero-images .rings {
+.rings {
   height: 129px;
   width: 530px;
+  z-index: -1;
+}
+
+.hero-images .rings {
   position: absolute;
   top: 8rem;
   right: 50%;
-  z-index: -1;
 }
 
 .hero-images .circle {
@@ -210,7 +222,7 @@ position: relative;
   font-size: 1rem;
 }
 
-.hero-text .contact-me {
+.contact-me {
   font-family: var(--ff-heading);
   font-weight: var(--fw-500);
   font-size: 1rem;
@@ -222,6 +234,11 @@ position: relative;
   text-decoration-thickness: 0.125rem;
 }
 
+.contact-me:hover {
+  color: var(--clr-accent-600);
+  transition: 0.3s ease all;
+}
+
 .experience {
   margin: 5rem auto;
   border-top: var(--clr-neutral-900) 1px solid;
@@ -231,6 +248,7 @@ position: relative;
   flex-direction: column;
   gap: 1.25rem;
   text-align: center;
+  position: relative;
 }
 
 .experience .title {
@@ -245,3 +263,76 @@ position: relative;
   font-size: 1.125rem;
   line-height: 1.5;
 }
+
+.experience .rings {
+  position: absolute;
+  bottom: -4rem;
+  left: 50%;
+}
+
+.skill {
+  color: var(--clr-neutral-900);
+}
+
+.time {
+  color: var(--clr-neutral-800);
+}
+
+.projects .title-callout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.projects .title-callout h2 {
+  font-size: 2rem;
+}
+
+.projects .title-callout a {
+  transform: translateY(.75rem);
+}
+
+.project-card {
+  display: grid;
+  margin-bottom: 2.5rem;
+}
+
+
+
+.project-card .project-title {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-300);
+  text-transform: uppercase;
+}
+
+.project-card .skills-used {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.project-card .links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.project-card .links a {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-500);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2.29px;
+  color: var(--clr-neutral-900);
+  text-decoration-color: var(--clr-accent-600);
+  text-underline-offset: 0.625rem;
+  text-decoration-thickness: 0.125rem;
+  
+}
+
+.project-card .links a:hover {
+  color: var(--clr-accent-600);
+  transition: 0.3s ease all;
+}
+
