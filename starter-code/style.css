@@ -385,6 +385,7 @@ position: relative;
   text-decoration-color: var(--clr-accent-600);
   text-underline-offset: 0.625rem;
   text-decoration-thickness: 0.125rem;
+  margin-bottom: 4rem;
 }
 
 .name-input, .email-input, .message-input {
@@ -425,6 +426,10 @@ input:not(:placeholder-shown):valid {
   border-bottom: solid 2px var(--clr-accent-500);
  }
 
+ textarea:not(:placeholder-shown):valid {
+  border-bottom: solid 2px var(--clr-accent-600);
+ }
+
 .email-input .error-message {
   color: var(--clr-accent-500);
   font-family: var(--ff-body);
@@ -438,13 +443,6 @@ input:not(:placeholder-shown):valid {
   display: block;
 }
 
-
-.email-input {
-  position: relative;
-}
-
-
-
 .contact .rings {
   z-index: 1;
   position: absolute;
@@ -452,4 +450,30 @@ input:not(:placeholder-shown):valid {
   right: 50%;
   overflow-x: hidden;
   pointer-events: none;
+}
+
+footer {
+  background-color: var(--clr-neutral-300);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+  
+}
+
+footer .divider {
+  width: 95%;
+  height: 1px;
+  background-color: var(--clr-neutral-900);
+}
+
+footer .logo {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-300);
+}
+
+footer .logo a {
+  text-decoration: none;
 }
