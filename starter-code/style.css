@@ -114,6 +114,7 @@ textarea:not([rows]) {
 html {
   background-color: var(--clr-neutral-200);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -122,7 +123,9 @@ font-size: var(--fs-400);
 font-weight: var(--fw-400);
 color: var(--clr-neutral-900);
 position: relative;
-
+max-width: 1110px;
+margin-inline: auto;
+padding-inline: 1rem;
 }
 
 .hero-banner {
@@ -231,7 +234,7 @@ position: relative;
   letter-spacing: 2.29px;
   color: var(--clr-neutral-900);
   text-decoration-color: var(--clr-accent-600);
-  text-underline-offset: 0.625rem;
+  text-underline-offset: 0.75rem;
   text-decoration-thickness: 0.125rem;
 }
 
@@ -346,6 +349,7 @@ position: relative;
   background-color: var(--clr-neutral-300);
   padding: 1rem;
   position: relative;
+  
 }
 
 .contact h2 {
@@ -462,10 +466,11 @@ footer {
   
 }
 
-footer .divider {
+.divider {
   width: 95%;
   height: 1px;
   background-color: var(--clr-neutral-900);
+  margin-inline: auto;
 }
 
 footer .logo {
@@ -476,4 +481,130 @@ footer .logo {
 
 footer .logo a {
   text-decoration: none;
+}
+
+@media screen and (min-width: 750px) {
+  .hero-banner {
+    width: 100%;
+  }
+
+  .navigation {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .navigation .logo {
+    font-size: 2rem;
+  }
+
+  .hero-banner {
+    position: relative;
+  }
+
+
+  .hero-banner .profile-pic {
+    width: 18rem;
+    height: 34rem;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    z-index: -1;
+  }
+
+  .hero-banner .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+
+  .hero-images .rings {
+    position: absolute;
+    top: 6.5rem;
+    left: -37.5%
+  }
+
+  .hero-images .circle {
+    top: 31rem;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 1.5rem 1rem;
+    text-align: left;
+  
+  }
+
+  .hero-text h1 {
+    font-size: 4.5rem;
+    color: var(--clr-neutral-900);
+    text-wrap: balance;
+  }
+
+  .experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    padding: 1rem;
+    border: none;
+  }
+
+  .experience .skill {
+    font-size: var(--fs-200);
+    color: var(--clr-neutral-900);
+  }
+
+  .experience .rings {
+    top: 25rem;
+    left: 80%;
+  }
+
+  .projects {
+    padding: 1rem;
+  }
+
+  .projects .title-callout h2 {
+    font-size: 4.5rem;
+  }
+
+  .projects .title-callout a {
+    transform: translateY(2rem);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact h2 {
+    font-size: 4.5rem;
+  }
+
+  .contact p {
+    font-size: var(--fs-400);
+    max-width: 45ch;
+  }
+  
+
+  .contact .rings {
+    right: 80%;
+    bottom: 0;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  footer .logo {
+    font-size: 2rem;
+  }
 }
